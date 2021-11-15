@@ -7,14 +7,18 @@ import { action } from "@storybook/addon-actions";
 // styles
 import "index.scss";
 
-// component imports
+//----------------- component imports ----------------//
 import Button from "components/Button";
+// Day List
 import DayListItem from "components/DayListItem";
 import DayList from "components/DayList";
+// Interviewer List
 import InterviewerListItem from "components/InterviewerListItem";
 import InterviewerList from "components/InterviewerList";
+// Appointment
 import Appointment from "components/Appointment/index.js";
 import Header from "components/Appointment/Header"
+import Empty from "components/Appointment/Empty";
 
 // Button
 storiesOf("Button", module)
@@ -150,5 +154,5 @@ storiesOf("Appointment", module)
   })
   .add("Appointment", () => <Appointment />)
   .add("Appointment with Time", () => <Appointment time="12pm" />)
-  .add("Header", () => <Header time="12pm" />);
-  
+  .add("Header", () => <Header time="12pm" />)
+  .add("Empty", () => <Empty onAdd={action("onAdd")} />);
