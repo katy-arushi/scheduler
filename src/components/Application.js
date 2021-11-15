@@ -27,7 +27,6 @@ const days = [
 export default function Application(props) {
 
   //setDay state, to be passed down to DayListItem
-
   const [day, setDay] = useState("Monday");
 
   return (
