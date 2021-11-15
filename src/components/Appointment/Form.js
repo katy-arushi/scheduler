@@ -2,10 +2,21 @@ import React, { useState } from 'react';
 import InterviewerList from "components/InterviewerList";
 import Button from "components/Button";
 
-const [student, setStudent] = useState(props.student || "");
-const [interviewer, setInterviewer] = useState(props.interviewer || null);
-
 export default function Form(props) {
+  
+  const [student, setStudent] = useState(props.student || "");
+  const [interviewer, setInterviewer] = useState(props.interviewer || null);
+
+  const reset = () => {
+    setStudent("")
+    setInterviewer(null)
+  };
+
+  const cancel = () => {
+    reset()
+    props.onCancel()
+  }
+
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
@@ -19,16 +30,20 @@ export default function Form(props) {
             onChange={(event) => setStudent(event.target.value)}
           />
         </form>
-        <InterviewerList 
-          /* your code goes here */
+        <InterviewerList
+          interviewers={props.interviewers}
+          value={interviewer}
+          onChange={setInterviewer}
         />
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
-          <Button danger /* your code goes here */>Cancel</Button>
-          <Button confirm /* your code goes here */>Save</Button>
+          <Button danger onClick={cancel}>Cancel</Button>
+          <Button confirm onClick={props.onSave}>Save</Button>
         </section>
       </section>
     </main>
   );
 }
+
+// anon functions only needed when calling a function with props
