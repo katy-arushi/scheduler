@@ -45,5 +45,3 @@ export default function Form(props) {
     </main>
   );
 }
-
-// anon functions only needed when calling a function with props
