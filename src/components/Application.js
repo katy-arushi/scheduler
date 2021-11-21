@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "components/Application.scss";
 import axios from "axios";
+import { getAppointmentsForDay } from "helpers/selectors";
 
 // components
 import DayList from "./DayList";
@@ -11,28 +12,51 @@ export default function Application(props) {
   const [state, setState] = useState({
     day: "Monday",
     days: [],
-    // you may put the line below, but will have to remove/comment hardcoded appointments variable
-    appointments: {}
+    appointments: {},
+    interviewers: {}
   });
 
-  const setDay = day => setState({ ...state, day });
-
-  const setDays = (days) => {
-    setState((prev) => {
-      return { ...prev, days }
-    });
-  }
-
   useEffect(() => {
-    axios.get("/api/days")
-    .then((response) => (setDays([...response.data])))
-  }, []);
+    const appointmentsURL = '/api/appointments'
+    const daysURL = '/api/days'
+    const interviewURL = '/api/interviewers'
 
-  const appointmentsArray = Object.values(state.appointments).map(appointment => {
+    const daysPromise = axios.get(daysURL)
+    const appointmentsPromise = axios.get(appointmentsURL)
+    const interviewsPromise = axios.get(interviewURL)
+
+    Promise.all([
+      daysPromise,
+      appointmentsPromise,
+      interviewsPromise
+    ]).then((response) => {
+      setState(prev => ({
+        ...prev,
+        days: response[0].data,
+        appointments: response[1].data,
+        interviewers: response[2].data
+      }))
+    })
+  }, [])
+  
+  const setDay = day => setState({ ...state, day });
+  
+  // const setDays = (days) => {
+    //   setState((prev) => {
+      //     return { ...prev, days }
+      //   });
+      // }
+  
+  const dailyAppointments = getAppointmentsForDay(state, state.day);
+  const appointmentsArray = dailyAppointments.map(appointment => {
+    const interview = getInterview(state, appointment.interview);
+
     return (
       <Appointment
-        key={appointment.id} 
-        {...appointment} 
+        key={appointment.id}
+        id={appointment.id}
+        time={appointment.time}
+        interview={interview}
       />
     );
   });
