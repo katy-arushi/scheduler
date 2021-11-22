@@ -12,3 +12,25 @@ export function getAppointmentsForDay(state, day) {
   } 
   return appointments;
 }
+
+export function getInterviewer(state, interview) {
+
+}
+
+// This function will return an object that contains the interview data 
+  // if it is passed an object that contains an interviewer.
+
+// The function should return a new object containing the interview data when we pass it an object that contains the interviewer. 
+  // Otherwise, the function should return null.
+  // The object it returns should look like this:
+
+    // {  
+    //   "student": "Lydia Miller-Jones",
+    //   "interviewer": {  
+    //     "id": 1,
+    //     "name": "Sylvia Palmer",
+    //     "avatar": "https://i.imgur.com/LpaY82x.png"
+    //   }
+    // }
+
+// need to transform an interview object with an id representing the interviewer to an object containing a nested object. 
