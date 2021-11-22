@@ -13,29 +13,23 @@ export function getAppointmentsForDay(state, day) {
   return appointments;
 }
 
-
-// called with this object
-  // { student: "Archie Cohen", interviewer: 2 }
 export function getInterview(state, interview) {
-  const interviewData = {};
-  interviewData[student] = interview.student;
+  if (!interview) {
+    return null;
+  }
 
+  // get the interviewerID from the object passed as argument
+  const interviewerID = interview.interviewer;
+
+  // format the return object and get the data from the state object
+  const returnObject = {  
+    "student": interview.student,
+    "interviewer": {  
+      "id": state.interviewers[interviewerID].id,
+      "name": state.interviewers[interviewerID].name,
+      "avatar": state.interviewers[interviewerID].avatar
+    }
+  }
+
+  return returnObject;
 }
-
-// This function will return an object that contains the interview data 
-  // if it is passed an object that contains an interviewer.
-
-// The function should return a new object containing the interview data when we pass it an object that contains the interviewer. 
-  // Otherwise, the function should return null.
-  // The object it returns should look like this:
-
-    // {  
-    //   "student": "Lydia Miller-Jones",
-    //   "interviewer": {  
-    //     "id": 1,
-    //     "name": "Sylvia Palmer",
-    //     "avatar": "https://i.imgur.com/LpaY82x.png"
-    //   }
-    // }
-
-// need to transform an interview object with an id representing the interviewer to an object containing a nested object. 
