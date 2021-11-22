@@ -13,7 +13,12 @@ export function getAppointmentsForDay(state, day) {
   return appointments;
 }
 
-export function getInterviewer(state, interview) {
+
+// called with this object
+  // { student: "Archie Cohen", interviewer: 2 }
+export function getInterview(state, interview) {
+  const interviewData = {};
+  interviewData[student] = interview.student;
 
 }
 
