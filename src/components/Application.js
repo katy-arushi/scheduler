@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "components/Application.scss";
 import axios from "axios";
-import { getAppointmentsForDay } from "helpers/selectors";
+import { getAppointmentsForDay, getInterview } from "helpers/selectors";
 
 // components
 import DayList from "./DayList";
@@ -40,12 +40,6 @@ export default function Application(props) {
   }, [])
   
   const setDay = day => setState({ ...state, day });
-  
-  // const setDays = (days) => {
-    //   setState((prev) => {
-      //     return { ...prev, days }
-      //   });
-      // }
   
   const dailyAppointments = getAppointmentsForDay(state, state.day);
   const appointmentsArray = dailyAppointments.map(appointment => {
