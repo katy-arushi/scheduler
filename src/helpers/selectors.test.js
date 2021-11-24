@@ -43,7 +43,7 @@ const state = {
   }
 };
 
-// ------------- getAppointmentsForDay test ------------- //
+// ------------- getAppointmentsForDay tests ------------- //
 test("getAppointmentsForDay returns an array", () => {
   const result = getAppointmentsForDay(state, "Monday");
   expect(Array.isArray(result)).toBe(true);
