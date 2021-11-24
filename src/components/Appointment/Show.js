@@ -2,7 +2,7 @@ import React from "react";
 
 // ---------------- incoming props ---------------- //
 // student : String  - eg. "Lydia Miller-Jones"
-// interviewer:  Object - 
+// interviewer : Object - 
       // "1": {  
       //   "id": 1,
       //   "name": "Sylvia Palmer",
