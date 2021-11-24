@@ -3,6 +3,9 @@ import InterviewerListItem from "./InterviewerListItem";
 import "components/InterviewerList.scss";
 
 // ---------------- incoming props ---------------- //
+// interviewers : Array - an array of objects as seen above
+// setInterviewer : Function - a function that accepts an interviewer id. This function will simply be passed down to the <InterviewerListItem>
+// interviewer : Number - a number that represents the id of the currently selected interviewer
 
 
 export default function InterviewerList(props) {
