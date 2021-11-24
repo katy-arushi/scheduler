@@ -19,16 +19,16 @@ export default function Application(props) {
   useEffect(() => {
     const appointmentsURL = '/api/appointments'
     const daysURL = '/api/days'
-    const interviewURL = '/api/interviewers'
+    const interviewersURL = '/api/interviewers'
 
     const daysPromise = axios.get(daysURL)
     const appointmentsPromise = axios.get(appointmentsURL)
-    const interviewsPromise = axios.get(interviewURL)
+    const interviewersPromise = axios.get(interviewersURL)
 
     Promise.all([
       daysPromise,
       appointmentsPromise,
-      interviewsPromise
+      interviewersPromise
     ]).then((response) => {
       setState(prev => ({
         ...prev,
