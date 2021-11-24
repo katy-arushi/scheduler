@@ -9,6 +9,14 @@ import Show from "./Show";
 import Empty from "./Empty";
 import Form from "./Form";
 
+// ---------------- incoming props ---------------- //
+// time : String - the time of the appointment (e.g "12pm")
+// interviewer : Object - 
+      // "1": {  
+      //   "id": 1,
+      //   "name": "Sylvia Palmer",
+      //   "avatar": "https://i.imgur.com/LpaY82x.png"
+      // },
 
 export default function Appointment(props) {
 
