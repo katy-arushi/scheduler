@@ -1,5 +1,10 @@
 import React from "react";
 
+// ---------------- incoming props ---------------- //
+// message : String - eg. "Could not delete appointment."
+// onClose : Function - to be called when the user clicks the Close button
+
+
 export default function Error(props) {
   return (
     <main className="appointment__card appointment__card--error">
