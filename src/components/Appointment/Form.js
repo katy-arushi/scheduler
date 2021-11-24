@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import InterviewerList from "components/InterviewerList";
 import Button from "components/Button";
 
+// ---- incoming props ---- //
+// -- time:String - the time of the appointment (e.g "12pm")
+
 export default function Form(props) {
   
   const [student, setStudent] = useState(props.student || "");
