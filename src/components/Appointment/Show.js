@@ -1,5 +1,16 @@
 import React from "react";
 
+// ---- incoming props ---- //
+// student : String  - eg. "Lydia Miller-Jones"
+// interviewer:  Object - 
+      // "1": {  
+      //   "id": 1,
+      //   "name": "Sylvia Palmer",
+      //   "avatar": "https://i.imgur.com/LpaY82x.png"
+      // },
+// onEdit : Function - to be called when the user clicks the Edit button
+// onDelete : Function - to be called when the user clicks the Delete button
+
 export default function Show(props) {
   return (
     <main className="appointment__card appointment__card--show">
