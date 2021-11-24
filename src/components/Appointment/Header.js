@@ -1,5 +1,8 @@
 import React from "react";
 
+// ---------------- incoming props ---------------- //
+// time : String - the time of the appointment (e.g "12pm")
+
 export default function Header(props) {
   return (
     <header className="appointment__time">
