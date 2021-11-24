@@ -2,6 +2,9 @@ import React from "react";
 import InterviewerListItem from "./InterviewerListItem";
 import "components/InterviewerList.scss";
 
+// ---------------- incoming props ---------------- //
+
+
 export default function InterviewerList(props) {
   
   const interviewersList = props.interviewers.map(interviewer => {
