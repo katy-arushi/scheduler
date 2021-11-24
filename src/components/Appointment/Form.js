@@ -4,7 +4,7 @@ import Button from "components/Button";
 
 // ---------------- incoming props ---------------- //
 // student : String
-// interviewers : Array
+// interviewers : Array - list of interviewers
 // interviewer : Number - id
 // onSave : Function
 // onCancel : Function - to be called when the user clicks the Cancel button
