@@ -1,6 +1,6 @@
 import React from "react";
 
-// ---- incoming props ---- //
+// ---------------- incoming props ---------------- //
 // student : String  - eg. "Lydia Miller-Jones"
 // interviewer:  Object - 
       // "1": {  
