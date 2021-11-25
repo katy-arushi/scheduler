@@ -42,7 +42,21 @@ export default function Application(props) {
   // --------- helper funcs --------- //
 
   function bookInterview(id, interview) {
-    console.log(id, interview);
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    return axios.put(`/api/appointments/${id}`, appointment)
+      .then(() => {
+        setState(prev => ({
+          ...prev,
+          appointments
+        }))
+      })
   }
   
   const setDay = day => setState({ ...state, day });
