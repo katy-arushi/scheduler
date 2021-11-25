@@ -38,6 +38,12 @@ export default function Application(props) {
       }))
     })
   }, [])
+
+  // --------- helper funcs --------- //
+
+  function bookInterview(id, interview) {
+    console.log(id, interview);
+  }
   
   const setDay = day => setState({ ...state, day });
   
@@ -54,6 +60,7 @@ export default function Application(props) {
         time={appointment.time}
         interview={interview}
         interviewers={interviewers}
+        bookInterview={bookInterview}
       />
     );
   });
