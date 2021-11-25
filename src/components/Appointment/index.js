@@ -17,6 +17,7 @@ import Form from "./Form";
       //   "name": "Sylvia Palmer",
       //   "avatar": "https://i.imgur.com/LpaY82x.png"
       // },
+// bookInterview : function
 
 export default function Appointment(props) {
 
@@ -27,6 +28,13 @@ export default function Appointment(props) {
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
+
+    function save(name, interviewer) {
+      const interview = {
+        student: name,
+        interviewer
+      };
+    }
   
   return (
     <article className="appointment">
@@ -46,6 +54,7 @@ export default function Appointment(props) {
           // interviewer={props.interview.interviewer}
           interviewers={props.interviewers}
           onCancel={back}
+          onSave={save}
         />
       )}
     </article>
