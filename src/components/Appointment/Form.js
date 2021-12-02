@@ -10,11 +10,9 @@ import Button from "components/Button";
 // onCancel : Function - to be called when the user clicks the Cancel button
 
 export default function Form(props) {
-
-  console.log(props)
   
   const [student, setStudent] = useState(props.student || "");
-  const [interviewer, setInterviewer] = useState(props.interviewer.id || null);
+  const [interviewer, setInterviewer] = useState(props.interviewer || null);
 
   const reset = () => {
     setStudent("")
@@ -48,7 +46,7 @@ export default function Form(props) {
       <section className="appointment__card-right">
         <section className="appointment__actions">
           <Button danger onClick={cancel}>Cancel</Button>
-          <Button confirm onClick={() => {props.onSave(student, interviewer)}}>Save</Button>
+          <Button confirm onClick={() => {props.onSave(student, interviewer, props.isNew)}}>Save</Button>
         </section>
       </section>
     </main>
