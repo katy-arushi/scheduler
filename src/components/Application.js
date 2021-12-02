@@ -60,7 +60,6 @@ export default function Application(props) {
   }
 
   function cancelInterview(id) {
-    //const newAppointments = {...}
     return axios.delete(`/api/appointments/${id}`)
       .then(() => {
         setState((prev) => {
