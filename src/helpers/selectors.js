@@ -1,13 +1,13 @@
 export function getAppointmentsForDay(state, day) {
-  const selectedDay = state.days.filter(eachDay => eachDay.name === day); //    [ { id: 1, name: 'Monday', appointments: [ 1, 2, 3 ] } ]
+  const selectedDay = state.days.filter(eachDay => eachDay.name === day);
 
   const appointments = [];
 
-  if (selectedDay[0]) { // { id: 1, name: 'Monday', appointments: [ 1, 2, 3 ] }
-    const selectedDayAppointments = selectedDay[0].appointments; // [1, 2, 3]
+  if (selectedDay[0]) { 
+    const selectedDayAppointments = selectedDay[0].appointments;
 
-    for (const appointmentID of selectedDayAppointments) { // 1
-      appointments.push(state.appointments[appointmentID]) // { id: 1, time: "12pm", interview: null }
+    for (const appointmentID of selectedDayAppointments) {
+      appointments.push(state.appointments[appointmentID]) 
     }
   } 
   return appointments;
@@ -35,15 +35,15 @@ export function getInterview(state, interview) {
 }
 
 export function getInterviewersForDay(state, day) {
-  const selectedDay = state.days.filter(eachDay => eachDay.name === day); //    [ { id: 1, name: 'Monday', appointments: [ 1, 2, 3 ] } ]
+  const selectedDay = state.days.filter(eachDay => eachDay.name === day);
 
   const interviewers = [];
 
-  if (selectedDay[0]) { // { id: 1, name: 'Monday', appointments: [ 1, 2, 3 ] }
-    const selectedDayInterviewers = selectedDay[0].interviewers; // [1, 2, 3]
+  if (selectedDay[0]) {
+    const selectedDayInterviewers = selectedDay[0].interviewers;
 
-    for (const interviewerID of selectedDayInterviewers) { // 1
-      interviewers.push(state.interviewers[interviewerID]) // { id: 1, time: "12pm", interview: null }
+    for (const interviewerID of selectedDayInterviewers) {
+      interviewers.push(state.interviewers[interviewerID])
     }
   } 
   return interviewers;
