@@ -34,7 +34,16 @@ export default function useApplicationData(props) {
     })
   }, [])
 
-  function bookInterview(id, interview) {
+  function updateSpots(id, days, value) {
+    for (const day of days) {
+      if (day.appointments.includes(id)) {
+        day.spots = parseInt(day.spots) + value
+      }
+    }
+    return days;
+  }
+
+  function bookInterview(id, interview, isNew) {
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
@@ -45,9 +54,11 @@ export default function useApplicationData(props) {
     };
     return axios.put(`/api/appointments/${id}`, appointment)
       .then(() => {
+        const days = isNew ? updateSpots(id, [...state.days], -1) : [...state.days]
         setState(prev => ({
           ...prev,
-          appointments
+          appointments,
+          days
         }))
       })
   }
@@ -55,6 +66,7 @@ export default function useApplicationData(props) {
   function cancelInterview(id) {
     return axios.delete(`/api/appointments/${id}`)
       .then(() => {
+        const days = updateSpots(id, [...state.days], 1);
         setState((prev) => {
           const newAppointment = {
             ...prev.appointments[id],
@@ -66,12 +78,13 @@ export default function useApplicationData(props) {
             {
               ...prev.appointments,
               [id]: newAppointment
-            }
+            },
+            days
           }
         })
       })
   }
-  
+
   return { state, setDay, bookInterview, cancelInterview };
 
 }
