@@ -7,11 +7,10 @@ export default function useVisualMode(initial) {
   const transition = (mode, replace) => {
     if (!replace) {
       setMode(mode);
-      setHistory([...history, mode]);
+      setHistory(prev => ([...prev, mode]));
     } else {
       // a combination of back and transition
       // when true, erase the page we're currently on
-
       const newHistory = [...history]; 
       newHistory.pop();
       newHistory.push(mode);
