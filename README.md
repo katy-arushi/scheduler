@@ -10,8 +10,8 @@ As with all modern React apps, the Scheduler app features dynamic rendering of c
 This project was created and published by [Arushi Katyal](https://github.com/katy-arushi) as part of the Web Development Program at [Lighthouse Labs](https://www.lighthouselabs.ca/).
 
 ## Screenshots
-!["scheduler homepage"]()
-!["scheduler delete appointment"]()
+!["scheduler homepage"](https://github.com/katy-arushi/scheduler/blob/master/public/images/screenshots/homepage.png?raw=true)
+!["scheduler delete appointment"](https://github.com/katy-arushi/scheduler/blob/master/public/images/screenshots/delete_apt.png?raw=true)
 
 ## Setup
 
