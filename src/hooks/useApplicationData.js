@@ -8,18 +8,18 @@ export default function useApplicationData(props) {
     appointments: {},
     interviewers: {}
   });
-  
+
   const setDay = day => setState({ ...state, day });
 
   useEffect(() => {
     const appointmentsURL = '/api/appointments'
     const daysURL = '/api/days'
     const interviewersURL = '/api/interviewers'
-  
+
     const daysPromise = axios.get(daysURL)
     const appointmentsPromise = axios.get(appointmentsURL)
     const interviewersPromise = axios.get(interviewersURL)
-  
+
     Promise.all([
       daysPromise,
       appointmentsPromise,
