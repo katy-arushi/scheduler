@@ -8,6 +8,7 @@ import Button from "components/Button";
 // interviewer : Number - id
 // onSave : Function
 // onCancel : Function - to be called when the user clicks the Cancel button
+// isNew : boolean - true when form is being called in create mode, false when in edit mode (used for update spots function)
 
 export default function Form(props) {
   
