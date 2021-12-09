@@ -17,7 +17,10 @@ This project was created and published by [Arushi Katyal](https://github.com/kat
 
 ## Setup
 
-Install dependencies with `npm install`.
+- Install dependencies with `npm install`.
+- Fork and clone the [Scheduler API](https://github.com/lighthouse-labs/scheduler-api) project outside of the Scheduler project directory.
+
+
 
 ### Dependencies
 - axios: ^0.24.0
