@@ -29,7 +29,7 @@ import Error from "./Error";
   const CONFIRM = "CONFIRM";
   const EDIT = "EDIT";
   const ERROR_SAVE = "ERROR_SAVE";
-  // const ERROR_DELETE = "ERROR_DELETE";
+  const ERROR_DELETE = "ERROR_DELETE";
 
 export default function Appointment(props) {
 
