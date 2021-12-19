@@ -11,7 +11,7 @@ This project was created and published by [Arushi Katyal](https://github.com/kat
 
 ## Screenshots
 ## App Overview
-!["scheduler overview gif"]()
+!["scheduler overview gif"](https://github.com/katy-arushi/scheduler/blob/master/public/images/screenshots/scheduler_gif.gif?raw=true)
 
 ### App Homepage
 !["scheduler homepage"](https://github.com/katy-arushi/scheduler/blob/master/public/images/screenshots/homepage.png?raw=true)
