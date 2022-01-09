@@ -11,6 +11,7 @@ As with all modern React apps, the Scheduler app features dynamic rendering of c
 ## Features
 - ⭐ State management using custom hooks
 - ⭐ Unit and end-to-end testing using Jest
+- ⭐ UI Component testing done using Storybook
 - ⭐ Integration testing using Cypress
 - ⭐ Continuous integration using Circle CI
 - ⭐ Server deployed to Heroku, client deployed to Netlify
