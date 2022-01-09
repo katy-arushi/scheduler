@@ -6,12 +6,15 @@ The app makes requests to an API to fetch and update appointment data from a dat
 
 As with all modern React apps, the Scheduler app features dynamic rendering of components, updating as the state of the data changes.
 
+**Check it out [here](https://stoic-poitras-73c653.netlify.app/)!**
+
 ## Features
 - ⭐ Custom hooks
 - ⭐ State management
 - ⭐ Unit and end-to-end testing using Jest
 - ⭐ Integration testing using Cypress
 - ⭐ Continuous integration using Circle CI
+- ⭐ Server deployed to Heroku, client deployed to Netlify
 
 ## Purpose
 This project was created and published by [Arushi Katyal](https://github.com/katy-arushi) as part of the Web Development Program at [Lighthouse Labs](https://www.lighthouselabs.ca/).
