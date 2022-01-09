@@ -9,8 +9,7 @@ As with all modern React apps, the Scheduler app features dynamic rendering of c
 **Check it out [here](https://stoic-poitras-73c653.netlify.app/)!**
 
 ## Features
-- ⭐ Custom hooks
-- ⭐ State management
+- ⭐ State management using custom hooks
 - ⭐ Unit and end-to-end testing using Jest
 - ⭐ Integration testing using Cypress
 - ⭐ Continuous integration using Circle CI
