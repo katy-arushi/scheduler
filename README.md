@@ -11,6 +11,7 @@ As with all modern React apps, the Scheduler app features dynamic rendering of c
 - ⭐ State management
 - ⭐ Unit and end-to-end testing using Jest
 - ⭐ Integration testing using Cypress
+- ⭐ Continuous integration using Circle CI
 
 ## Purpose
 This project was created and published by [Arushi Katyal](https://github.com/katy-arushi) as part of the Web Development Program at [Lighthouse Labs](https://www.lighthouselabs.ca/).
