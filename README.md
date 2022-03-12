@@ -6,7 +6,7 @@ The app makes requests to an API [here](https://github.com/lighthouse-labs/sched
 
 As with all modern React apps, the Scheduler app features dynamic rendering of components, updating as the state of the data changes.
 
-## **Check it out [here](https://interview-scheduler-2022.netlify.app/)!**
+## **Access the deployed app [here](https://interview-scheduler-2022.netlify.app/)!**
 
 ## Features
 - ⭐ State management using custom hooks
